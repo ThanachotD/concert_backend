@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  app:
+    container_name: nestjs_app
+    build: .
+    ports:
+      - '3000:3000'
+    depends_on:
+      - postgres_db
+    environment:
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_PORT: ${DATABASE_PORT}
+  postgres_db:
+    container_name: postgres_db
+    image: postgres:latest
+    ports:
+      - '${DATABASE_PORT}:5432'
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
