@@ -6,6 +6,9 @@ import { UserModule } from './user/user.module';
 import { ConcertModule } from './concert/concert.module';
 import { ReserveModule } from './reserve/reserve.module';
 import { ConfigModule } from '@nestjs/config';
+import { User } from './user/entities/user.entity';
+import { Concert } from './concert/entities/concert.entity';
+import { Reserve } from './reserve/entities/reserve.entity';
 
 @Module({
   imports: [
@@ -19,7 +22,7 @@ import { ConfigModule } from '@nestjs/config';
       username: process.env.DATABASE_USER,
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
-      entities: [UserModule, ConcertModule, ReserveModule],
+      entities: [User, Concert, Reserve],
       synchronize: true,
     }),
     UserModule,
