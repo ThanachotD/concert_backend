@@ -34,7 +34,7 @@ export class UserController {
 
   @Patch(':id')
   @ApiOperation({ summary: 'Get a user by ID' })
-  @ApiResponse({ status: HttpStatus.OK, description: 'User found', type: CreateUserDto })
+  @ApiResponse({ status: HttpStatus.OK, description: 'User found', type: UpdateUserDto })
   @ApiResponse({ status: HttpStatus.NOT_FOUND, description: 'User not found' })
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.update(+id, updateUserDto);
