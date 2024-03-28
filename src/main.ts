@@ -9,8 +9,8 @@ async function bootstrap() {
     origin: 'http://localhost:3000',
   });
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The cats API description')
+    .setTitle('Concert')
+    .setDescription('The concert API Documentaiton')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
