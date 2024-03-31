@@ -26,37 +26,56 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+# The Backend for Concert Application
 
-```bash
-$ npm install
-```
+"This project simplifies REST API development with a ready-to-use template, PostgreSQL integration, and Docker-powered deployment.
 
-## Running the app
+## Features
 
-```bash
-# development
-$ npm run start
+- **Nest:** High-performance web framework for building APIs.
+- **PostgreSQL:** A flexible and scalable database.
+- **Docker:** Containerization for easy environment setup and deployment.
 
-# watch mode
-$ npm run start:dev
+## Setup
 
-# production mode
-$ npm run start:prod
-```
+**Prerequisites**
 
-## Test
+- Docker and Docker Compose: https://docs.docker.com/get-docker/
+- A basic understanding of FastAPI, MongoDB, and Docker concepts.
 
-```bash
-# unit tests
-$ npm run test
+**Installation**
 
-# e2e tests
-$ npm run test:e2e
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/SF406/BackendGCP.git
+   ```
+2. If you have a docker in you Environtment:
+   ```bash
+   docker-compose up -d
+   ```
+3. Testing API health check go to `http://localhost:8080/`
 
-# test coverage
-$ npm run test:cov
-```
+   If successful, you should see the following response:
+
+   ```bash
+   {
+    "hello":"world"
+   }
+   ```
+
+4. You can open API Documentation go to `http://localhost:8080/docs`
+5. After Code when changing after
+
+   ```bash
+   docker-compose up -d
+   ```
+
+   Can update by command:
+
+   ```bash
+   docker-compose up --build
+   ```
+
 
 ## Support
 
