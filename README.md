@@ -63,7 +63,7 @@
    }
    ```
 
-4. You can open API Documentation go to `http://localhost:8080/docs`
+4. You can open API Documentation go to `http://localhost:8080/api/docs`
 5. After Code when changing after
 
    ```bash
