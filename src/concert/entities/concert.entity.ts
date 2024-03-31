@@ -21,6 +21,7 @@ export class Concert {
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     UpdatedAt: Date;
 
-    @OneToMany(() => Reserve, (Reserve) => Reserve.concert)
+    @OneToMany(() => Reserve, reserve => reserve.concert)
     Reserves: Reserve[];
+
 }

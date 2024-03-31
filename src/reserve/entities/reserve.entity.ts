@@ -16,7 +16,10 @@ export class Reserve {
     @Column()
     NumberOfSeats: number;
 
-    @Column({ type: 'timestamp' })
+    @Column({ type: 'text', nullable: true }) // Optional
+    Type: string;
+
+    @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     ReserveDate: Date;
 
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })

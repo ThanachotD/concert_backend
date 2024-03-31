@@ -10,11 +10,16 @@ COPY . .
 # Install dependencies
 RUN npm install
 
+RUN npm install @nestjs/config
+
 # Build the project (if you are using TypeScript)
 RUN npm run build
 
+# Copy the current directory contents into the container
+COPY . .
+
 # Make port 3000 available to the world outside this container
-EXPOSE 3000
+EXPOSE 8080
 
 # Run the app when the container launches
 CMD ["node", "dist/main"]
