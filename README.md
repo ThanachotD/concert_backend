@@ -41,7 +41,7 @@
 **Prerequisites**
 
 - Docker and Docker Compose: https://docs.docker.com/get-docker/
-- A basic understanding of FastAPI, MongoDB, and Docker concepts.
+- A basic understanding of Nest, Postgresql, and Docker concepts.
 
 **Installation**
 
